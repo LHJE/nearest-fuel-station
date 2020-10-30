@@ -8,7 +8,7 @@ class Station
     @station_name = attrs[:station_name]
     @street_address = get_address(attrs[:street_address], attrs[:city], attrs[:state], attrs[:zip])
     @fuel_type = get_fuel_type(attrs[:fuel_type_code])
-    @access_times = attrs[:access_days_time]
+    @access_times = attrs[:access_days_time].split(";")
   end
 
   def get_address(street, city, state, zip)
