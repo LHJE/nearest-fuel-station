@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-
-RSpec.describe 'Navbar' do
+RSpec.describe 'Search Page' do
   before :each do
     visit root_path
 
@@ -10,6 +9,19 @@ RSpec.describe 'Navbar' do
 
   it "expects path to lead to search page" do
     expect(current_path).to eq(search_path)
+  end
+
+  it "expects to see the closest electric fuel station" do
+    expect(page).to have_content("Seventeenth Street Plaza")
+    expect(page).to have_content("1225 17th St.")
+    expect(page).to have_content("Electric")
+    expect(page).to have_content("MO: Not Specified")
+    expect(page).to have_content("TU: Not Specified")
+    expect(page).to have_content("WE: Not Specified")
+    expect(page).to have_content("TH: Not Specified")
+    expect(page).to have_content("FR: Not Specified")
+    expect(page).to have_content("SA: Not Specified")
+    expect(page).to have_content("SU: Not Specified")
   end
 
 end
