@@ -5,7 +5,7 @@ class SearchFacade
   end
 
   def self.find_directions(starting_location, ending_location)
-    attributes = DirectionDatabase.get_station(starting_location, ending_location)
+    attributes = DirectionDatabase.get_station(starting_location, ending_location)[:route][:legs][0][:maneuvers]
     Direction.new(attributes)
   end
 end
