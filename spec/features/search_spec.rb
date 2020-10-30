@@ -33,5 +33,8 @@ RSpec.describe 'Search Page' do
     expect(page).to have_content("1225 17TH ST is on the right.")
   end
 
+  it "expects to see travel time" do
+    expect(page).to have_content("Travel Time: 00:00:40")
+  end
 
 end
