@@ -1,7 +1,7 @@
 class Station
   attr_reader :station_name,
               :street_address,
-              :fuel_type_code,
+              :fuel_type,
               :access_times
 
   def initialize(attrs)
