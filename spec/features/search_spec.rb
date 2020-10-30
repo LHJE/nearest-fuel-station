@@ -13,7 +13,7 @@ RSpec.describe 'Search Page' do
 
   it "expects to see the closest electric fuel station" do
     expect(page).to have_content("Seventeenth Street Plaza")
-    expect(page).to have_content("1225 17th St.")
+    expect(page).to have_content("1225 17th St. Denver, CO 80202")
     expect(page).to have_content("Electric")
     expect(page).to have_content("MO: Not Specified")
     expect(page).to have_content("TU: Not Specified")
@@ -26,6 +26,11 @@ RSpec.describe 'Search Page' do
 
   it "expects to see the distance to the station" do
     expect(page).to have_content("Distance: 0.1 miles")
+  end
+
+  it "exepects to see directions to the station" do
+    expect(page).to have_content("Start out going southeast on 17th St toward Larimer St/CO-33.")
+    expect(page).to have_content("1225 17TH ST is on the right.")
   end
 
 
