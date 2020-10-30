@@ -1,14 +1,18 @@
 class Station
-  attr_reader :name,
-              :address,
-              :fuel_type,
+  attr_reader :station_name,
+              :street_address,
+              :fuel_type_code,
               :access_times
 
   def initialize(attrs)
     require "pry"; binding.pry
-    @name = attrs[:name]
-    @address = attrs[:address]
-    @fuel_type = attrs[:fuel_type]
-    @access_times = attrs[:access_times]
+    @station_name = attrs[:station_name]
+    @street_address = get_address(attrs[:street_address], attrs[:city], attrs[:state], attrs[:zip])
+    @fuel_type = get_fuel_type(attrs[:fuel_type_code])
+    @access_times = attrs[:access_days_time]
+  end
+
+  def get_address(street, city, state, zip)
+    "#{street} #{city}, #{state} #{zip}"
   end
 end
