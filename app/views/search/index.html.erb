@@ -14,6 +14,6 @@
 <br>
 <h2>Directions:</h2>
 <p>Travel Time: <%= @directions.travel_time %> </p>
-<% @directions.directions.each do |leg| %>
+<% @directions.narrative.each do |leg| %>
   <p><%= leg %></p>
 <% end %>

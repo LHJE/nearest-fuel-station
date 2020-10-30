@@ -1,18 +1,18 @@
 class Direction
-  attr_reader :directions,
+  attr_reader :narrative,
               :travel_time
 
   def initialize(attrs)
-    @directions = get_directions(attrs)
+    @narrative = get_narrative(attrs)
     @travel_time = get_travel_time(attrs)
   end
 
-  def get_directions(attrs)
-    narrative = []
+  def get_narrative(attrs)
+    legs = []
     attrs.each do |attr|
-      narrative << attr[:narrative]
+      legs << attr[:narrative]
     end
-    narrative
+    legs
   end
 
   def get_travel_time(attrs)
