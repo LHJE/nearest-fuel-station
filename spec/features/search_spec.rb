@@ -24,4 +24,9 @@ RSpec.describe 'Search Page' do
     expect(page).to have_content("SU: Not Specified")
   end
 
+  it "expects to see the distance to the station" do
+    expect(page).to have_content("Distance: 0.1 miles")
+  end
+
+
 end
