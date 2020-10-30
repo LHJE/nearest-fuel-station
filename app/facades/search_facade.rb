@@ -3,4 +3,9 @@ class SearchFacade
     attributes = StationDatabase.get_station(starting_location)[:fuel_stations][0]
     Station.new(attributes)
   end
+
+  def self.find_directions(starting_location)
+    attributes = DirectionDatabase.get_station(starting_location)
+    Direction.new(attributes)
+  end
 end
