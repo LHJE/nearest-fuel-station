@@ -4,8 +4,8 @@ class SearchFacade
     Station.new(attributes)
   end
 
-  def self.find_directions(starting_location)
-    attributes = DirectionDatabase.get_station(starting_location)
+  def self.find_directions(starting_location, ending_location)
+    attributes = DirectionDatabase.get_station(starting_location, ending_location)
     Direction.new(attributes)
   end
 end
