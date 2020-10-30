@@ -8,3 +8,12 @@
 <% @station.access_times.each do |time| %>
   <p><%= time %></p>
 <% end %>
+
+
+<br>
+<br>
+<h2>Directions:</h2>
+<p>Travel Time: <%= @directions.travel_time %> </p>
+<% @directions.directions.each do |leg| %>
+  <p><%= leg %></p>
+<% end %>
