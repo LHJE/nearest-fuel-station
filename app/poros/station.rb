@@ -5,7 +5,6 @@ class Station
               :access_times
 
   def initialize(attrs)
-    require "pry"; binding.pry
     @station_name = attrs[:station_name]
     @street_address = get_address(attrs[:street_address], attrs[:city], attrs[:state], attrs[:zip])
     @fuel_type = get_fuel_type(attrs[:fuel_type_code])
@@ -14,5 +13,11 @@ class Station
 
   def get_address(street, city, state, zip)
     "#{street} #{city}, #{state} #{zip}"
+  end
+
+  def get_fuel_type(type)
+    if type == "ELEC"
+      "Electric"
+    end
   end
 end
