@@ -2,6 +2,7 @@
 
 <h2> <%= @station.station_name %></h2>
 <h3> <%= @station.street_address %></h3>
+<h4> Distance: <%= @station.distance %> miles</h4>
 <p> Fuel Type: <%= @station.fuel_type %></p>
 <p> Access Times:</p>
 <% @station.access_times.each do |time| %>
