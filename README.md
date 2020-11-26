@@ -12,4 +12,4 @@ Rails 5.2.4.3
 - `bundle install`
 - `bundle exec figaro install`
 - `rails db:{create,migrate}``
-- `rails s`
+- `rails s` 
